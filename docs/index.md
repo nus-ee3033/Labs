@@ -1,5 +1,14 @@
 # Home
 
+![Alt text](sign.png "AWAS"){width="500"}
+/// caption
+
+///
+
+!!! danger
+	 This site is under construction, please do not refer to any information presented here.
+
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 
 <!-- TODO: Write a short introduction welcoming students to your course. -->
