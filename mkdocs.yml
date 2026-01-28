@@ -46,12 +46,12 @@ markdown_extensions:
   - def_list
   - pymdownx.tasklist:
       custom_checkbox: true
-copyright: <p> <a href="https://nus-ee3033.github.io/labs">NUS EE3033 Labs</a> © 2026 by <a href="https://github.com/nus-ee3033">NUS EE3033 Team</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width:1em;max-height:1em;margin-left:.2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width:1em;max-height:1em;margin-left:.2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width:1em;max-height:1em;margin-left:.2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="" style="max-width:1em;max-height:1em;margin-left:.2em;">. Template designed by <a href="mailto:neil@neilbaner.net">Neil Banerjee</a>. </p> 
+copyright: <p> <a href="https://nus-ee3033.github.io/Labs">NUS EE3033 Labs</a> © 2026 by <a href="https://github.com/nus-ee3033">NUS EE3033 Team</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width:1em;max-height:1em;margin-left:.2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width:1em;max-height:1em;margin-left:.2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width:1em;max-height:1em;margin-left:.2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="" style="max-width:1em;max-height:1em;margin-left:.2em;">. Template designed by <a href="mailto:neil@neilbaner.net">Neil Banerjee</a>. </p> 
 
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/nus-ee3033/labs 
+      link: https://github.com/nus-ee3033/Labs 
 
     - icon: fontawesome/solid/envelope
       link: mailto:ni.qq@nus.edu.sg 
