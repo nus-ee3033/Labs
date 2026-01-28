@@ -69,6 +69,10 @@ nav:
     - Lab 2: manuals/lab_02/manual_02.md
     - Lab 3: manuals/lab_03/manual_03.md
     - Lab 4: manuals/lab_04/manual_04.md
+    - Lab 5: manuals/lab_05/manual_05.md
+    - Lab 6: manuals/lab_06/manual_06.md
+    - Project: manuals/project/project.md
+    # - Template: manuals/template/template.md
 plugins:
   - mkdocs-video:
       is_video: True

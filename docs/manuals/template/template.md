@@ -1,18 +1,8 @@
-# Lab 1: Setup
+# Lab 1: Learning to use Zensical
 
+This is a sample page to demonstrate the most useful features of Zensical. It is generally quite easy to use. All the normal markdown features are available. 
 
-!!! info
-    In this lab, you will perform the initial inspection, verification, operations and software installation for the two-wheeled self-balancing vehicle platform (we call it balancing car hereafter). The goal is to familiarize with the platform and make sure it is electrically safe, mechanically correct, and functionally ready for subsequent experiments. Please bring your own computer for this lab.
-
-
-### Task lists
-
-- [ ] Identify hardware blocks and their connections in the balancing car platform.
-- [ ] Check sensor feedback, power and motor speed.
-- [ ] Operate the vehicle to move in its default (normal) mode with smart device.
-- [ ] Install necessary software for the following labs and project.
-
-<!-- ## Text formatting
+## Text formatting
 
 **bold text**
 
@@ -131,4 +121,4 @@ Or use a blank line for a new paragraph.
     And perhaps ask a question here
 
 ??? tip "You can have collapsible blocks too"
-    For information most people may not want/need -->
+    For information most people may not want/need
