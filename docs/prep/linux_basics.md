@@ -3,7 +3,52 @@
 If this is your first time using a terminal, don't worry — you only need a small set of commands to survive this course. This page covers what you'll actually use in Labs 1–6 and the ROS2 lectures.
 
 !!! info
-    You'll mostly be working inside Ubuntu Desktop, everything below applies there.
+    You'll mostly be working inside Ubuntu (either in a VM or via WSL). Everything below applies there.
+
+## What actually happens when you type a command
+
+When you type something into the terminal and hit enter, you're running a program with that name. `ls`, for example, is just a small program whose job is to list the contents of your current folder. Try it now:
+
+```bash
+ls
+```
+
+Most programs accept **parameters** (also called flags or options) that change how they behave — think of them as instructions you're giving the program about what you want. There are two styles:
+
+- a single `-` followed by one-character parameters, e.g. `-l`
+- a double `--` followed by full-word parameters, e.g. `--all`
+
+For example:
+
+```bash
+ls -l
+```
+
+The `l` parameter tells `ls` to print its output in **long format** (permissions, size, modified date, etc.) instead of just names. Try it and compare with plain `ls`.
+
+You can also stack several single-character parameters together after one `-`. The `a` parameter tells `ls` to show **all** files, including hidden ones (any file or folder whose name starts with a `.`):
+
+```bash
+ls -la
+```
+
+Now you should see extra entries like `.bashrc` or `.config` that weren't visible before — these are hidden by default because a leading `.` tells Linux "don't show me unless asked."
+
+!!! tip
+    This `-flag` / `--flag` pattern isn't unique to `ls` — almost every command-line tool in this course, including `ros2` and `colcon`, works the same way (e.g. `colcon build --symlink-install`).
+
+### Finding out what a command does: `man`
+
+Every built-in command comes with a manual page. If you forget what a command or parameter does, don't guess — look it up:
+
+```bash
+man ls
+```
+
+This opens a scrollable manual (use the arrow keys, press `q` to quit). It lists every available parameter for that command with an explanation. This is often faster than searching the web, and it always matches the exact version installed on your machine.
+
+!!! tip
+    Not every command has a `man` page (e.g. some `ros2` subcommands don't). In those cases, try adding `-h` or `--help` instead, e.g. `ros2 pkg -h`.
 
 ## Why command line at all?
 
@@ -15,6 +60,22 @@ Linux and ROS2 tools (`ros2 run`, `colcon build`, `rosdep`, etc.) don't always h
 - **WSL on Windows**: open PowerShell and type `wsl`, or launch the "Ubuntu" app from the Start menu
 
 ## Navigating the file system
+
+### A few symbols you'll see everywhere
+
+Before the commands, it helps to know what these shorthand symbols mean when they appear in a path:
+
+| Symbol | Meaning |
+|---|---|
+| `/` | The **root** of the entire file system — everything on the machine lives somewhere under `/`. Also used as a separator between folder names, e.g. `home/user/Documents`. |
+| `~` | Your **home folder** (shorthand for something like `/home/yourusername`). Typing `cd ~` always takes you home, no matter where you are. |
+| `.` | The **current** folder you're in. Mostly used when running something in the current directory, e.g. `./my_script.sh`. |
+| `..` | The **parent** folder, one level up from where you are. `cd ..` moves you up one level. |
+
+!!! tip
+    You can chain `..` to go up multiple levels: `cd ../..` moves up two folders. And `~/Documents` means "the Documents folder inside my home folder," regardless of your current location.
+
+### Commands
 
 | Command | What it does |
 |---|---|
@@ -96,7 +157,7 @@ and, inside your workspace, also:
 . install/setup.bash
 ```
 
-!!! question "Why does `ros2` say 'command not found' sometimes?"
+??? tip "Why does `ros2` say 'command not found' sometimes?"
     Almost always because this terminal hasn't been sourced yet. Run the two commands above and try again.
 
 ## Quick reference cheat sheet
@@ -121,5 +182,5 @@ and, inside your workspace, also:
 
 ## Where to go for more
 
-- [Ubuntu's official command-line tutorial](https://ubuntu.com/tutorials/command-line-for-beginners)
+- [Ubuntu's official command-line tutorial](https://ubuntu.com/desktop/docs/en/latest/tutorial/the-linux-command-line-for-beginners/)
 - Search any error message you see — Linux/ROS2 error messages are usually specific enough to find a fix quickly
