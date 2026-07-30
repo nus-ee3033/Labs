@@ -2,6 +2,8 @@
 
 This repository is intended for students taking EE3033 at NUS, ECE.
 
+URL：**[https://nus-ee3033.github.io/labs](https://nus-ee3033.github.io/labs)**
+
 # Template Credit
 
  This repository is based on the Zensical Template created by [stm32-fanclub](https://github.com/stm32-fanclub/zensical_nus_template) for NUS Labs.
