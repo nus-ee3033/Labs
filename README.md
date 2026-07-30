@@ -2,7 +2,7 @@
 
 This repository is intended for students taking EE3033 at NUS, ECE.
 
-URL：**[https://nus-ee3033.github.io/labs](https://nus-ee3033.github.io/labs)**
+URL：**[https://nus-ee3033.github.io/labs/](https://nus-ee3033.github.io/Labs/)**
 
 # Template Credit
 
