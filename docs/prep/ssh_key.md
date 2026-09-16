@@ -1,17 +1,18 @@
-# SSH Key Setup Guide
+# (Almost Painless) SSH Setup Guide
 
-!!! info 
+# 1. Student Guide: Set Up an SSH Key
+
+!!! info
+
     SSH keys allow you to connect to the Raspberry Pi without entering the account password every time.
 
     Each Ubuntu VM should generate its **own SSH key**. Do not share your private SSH key with anyone.
 
 ---
 
-# 1. Student Guide: Set Up an SSH Key
-
 Complete the following steps **inside your Ubuntu virtual machine**.
 
-## Step 1 — Generate an SSH key
+## Step 1 — Generate an SSH Key
 
 Open a terminal and run:
 
@@ -19,15 +20,15 @@ Open a terminal and run:
 ssh-keygen -t ed25519 -C "AY<YYYY>S<S>"
 ```
 
-Replace `<YYYY>` with the current acedemic year and `<S>` with the current semester.
+Replace `<YYYY>` with the current academic year and `<S>` with the current semester.
 
-For example, for Acedemic Year 2026/2027, Semester 1:
+For example, for Academic Year 2026/2027, Semester 1:
 
 ```bash
 ssh-keygen -t ed25519 -C "AY2627S1"
 ```
 
-The comment allows you to identify and clear your student SSH keys at the end of the semester.
+The comment allows the teaching team to identify and clear student SSH keys from a particular semester.
 
 You will see a prompt similar to:
 
@@ -46,8 +47,8 @@ This creates two files:
 ~/.ssh/id_ed25519.pub
 ```
 
-* `id_ed25519` is your **private key**. Do not share it.
-* `id_ed25519.pub` is your **public key**. This is the key that will be added to the Raspberry Pi.
+- `id_ed25519` is your **private key**. Do not share it.
+- `id_ed25519.pub` is your **public key**. This is the key that will be added to the Raspberry Pi.
 
 ---
 
@@ -90,16 +91,18 @@ ssh balance@192.168.1.xx
 You should now be able to log in without entering the Raspberry Pi password.
 
 ---
+
 !!! tip
+
     ### Using a Different VM or Computer
 
     SSH keys belong to the machine or VM on which they were generated.
 
     If you:
 
-    * create a new Ubuntu VM,
-    * reinstall the VM, or
-    * connect from another computer,
+    - create a new Ubuntu VM,
+    - reinstall the VM, or
+    - connect from another computer,
 
     generate a **new SSH key** on that machine and repeat the setup above.
 
@@ -107,7 +110,65 @@ You should now be able to log in without entering the Raspberry Pi password.
 
 ---
 
-# 2. Clearing Student SSH Keys
+# 2. SSH Shortcuts
+
+!!! info
+
+    You can create SSH shortcuts in your Ubuntu VM so that you do not need to type the full hostname every time.
+
+On your VM, open:
+
+```bash
+nano ~/.ssh/config
+```
+
+Add:
+
+```ssh
+Host car
+    HostName balanceX.local
+    User balance
+
+Host car-ros
+    HostName balanceX.local
+    User balance
+    RequestTTY force
+    RemoteCommand bash -lc 'docker start ros2_humble >/dev/null 2>&1 || true; docker exec -it -w /home/ros2_ws ros2_humble bash'
+```
+
+Replace `X` with the number assigned to your Raspberry Pi.
+
+Set the correct permission for the SSH configuration file:
+
+```bash
+chmod 600 ~/.ssh/config
+```
+
+You can now use:
+
+```bash
+ssh car
+```
+
+to open a normal SSH session on the Raspberry Pi.
+
+Or use:
+
+```bash
+ssh car-ros
+```
+
+to enter the ROS 2 Docker container directly at:
+
+```text
+/home/ros2_ws
+```
+
+The `car-ros` shortcut will start the `ros2_humble` container automatically if it is not already running.
+
+---
+
+# 3. Clearing Student SSH Keys
 
 All SSH public keys added to the `balance` account are stored in:
 
@@ -123,13 +184,14 @@ AY2627S1
 
 ## Check Existing Student Keys
 
-Before removing anything, you can list the student keys for the semester using:
+Before removing anything, you can list the student keys for a particular semester using:
 
 ```bash
 grep "AY<YYYY>S<S>" /home/balance/.ssh/authorized_keys
 ```
 
 For example:
+
 ```bash
 grep "AY2627S1" /home/balance/.ssh/authorized_keys
 ```
@@ -140,18 +202,19 @@ This only displays matching keys and does not modify the file.
 
 ## Remove Student Keys for the Semester
 
-To remove all student keys labelled for `AY2627S1`, run:
+To remove all student keys for a particular semester, run:
 
 ```bash
-sed -i 'AY<YYYY>S<S>/d' /home/balance/.ssh/authorized_keys
+sed -i '/AY<YYYY>S<S>/d' /home/balance/.ssh/authorized_keys
 ```
 
-For example: 
+For example, to remove all keys labelled `AY2627S1`:
+
 ```bash
-sed -i 'AY2627S1/d' /home/balance/.ssh/authorized_keys
+sed -i '/AY2627S1/d' /home/balance/.ssh/authorized_keys
 ```
 
-This removes only lines tagged with:
+This removes only lines containing:
 
 ```text
 AY2627S1
@@ -173,15 +236,16 @@ You can also inspect all remaining authorised keys using:
 cat /home/balance/.ssh/authorized_keys
 ```
 
-
 ---
 
-## File Permissions
+!!! tip
 
-If required, restore the correct ownership and permissions with:
+    ## File Permissions
 
-```bash
-sudo chown balance:balance /home/balance/.ssh/authorized_keys
-sudo chmod 700 /home/balance/.ssh
-sudo chmod 600 /home/balance/.ssh/authorized_keys
-```
+    If required, restore the correct ownership and permissions with:
+
+    ```bash
+    sudo chown balance:balance /home/balance/.ssh/authorized_keys
+    sudo chmod 700 /home/balance/.ssh
+    sudo chmod 600 /home/balance/.ssh/authorized_keys
+    ```
