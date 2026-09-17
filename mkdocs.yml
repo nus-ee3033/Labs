@@ -3,6 +3,8 @@ site_url: https://nus-ee3033.github.io/labs here
 theme:
   features:
     - content.footnote.tooltips
+    - content.code.copy
+    - content.code.select
   name: material
   palette:
     # Palette toggle for light mode
@@ -55,6 +57,15 @@ extra:
 
     - icon: fontawesome/solid/envelope
       link: mailto:ni.qq@nus.edu.sg 
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
 
 nav:
   - Home: index.md
