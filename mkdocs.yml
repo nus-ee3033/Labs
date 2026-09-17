@@ -64,6 +64,7 @@ nav:
     - Lab Prerequisites: prep/prerequisites.md
     - Linux Command-Line Basics: prep/linux_basics.md
     - SSH Key Setup Guide: prep/ssh_key.md
+    - Setup VSCode: prep/setup_vscode.md
     # TODO: Add more instructions for preparatory work - e.g. set up environment, install software, prepare hardware etc.
   - Lab manuals: 
     # TODO: Add, remove, change as needed for manuals
