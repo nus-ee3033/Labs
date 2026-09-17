@@ -1,6 +1,6 @@
 # Home
 
-![Alt text](sign.png "AWAS"){width="500"}
+![Alt text](index_assets/sign.png "AWAS"){width="500"}
 /// caption
 
 ///
