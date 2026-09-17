@@ -1,9 +1,12 @@
 # Home
 
+!!! danger
+    This site is under construction, please be careful when referring to any information presented here.
+
+
 ![Alt text](index_assets/sign.png "AWAS"){width="500"}
 
-!!! danger
-    This site is under construction, please do not refer to any information presented here.
+
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 
