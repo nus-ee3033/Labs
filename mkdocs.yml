@@ -1,5 +1,5 @@
 site_name: EE3033 Labs
-site_url: https://nus-ee3033.github.io/labs here
+site_url: https://nus-ee3033.github.io/Labs
 theme:
   features:
     - content.footnote.tooltips
@@ -29,6 +29,7 @@ theme:
 
 extra_css:
   - stylesheets/extra.css
+
 markdown_extensions:
   - admonition
   - pymdownx.details
@@ -36,9 +37,6 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - pymdownx.blocks.caption
-  - attr_list
-  - md_in_html
-  - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.caret
@@ -48,6 +46,13 @@ markdown_extensions:
   - def_list
   - pymdownx.tasklist:
       custom_checkbox: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+
 copyright: <p> <a href="https://nus-ee3033.github.io/Labs">NUS EE3033 Labs</a> © 2026 by <a href="https://github.com/nus-ee3033">NUS EE3033 Team</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width:1em;max-height:1em;margin-left:.2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width:1em;max-height:1em;margin-left:.2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width:1em;max-height:1em;margin-left:.2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="" style="max-width:1em;max-height:1em;margin-left:.2em;">. Template designed by <a href="mailto:neil@neilbaner.net">Neil Banerjee</a>. </p> 
 
 extra:
@@ -58,21 +63,12 @@ extra:
     - icon: fontawesome/solid/envelope
       link: mailto:ni.qq@nus.edu.sg 
 
-markdown_extensions:
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences
-
 nav:
   - Home: index.md
   - How to use this website: howto.md
-  - Grading: grading.md
+  # - Grading: grading.md
   - Preparing for labs:
-    - Lab Prerequisites: prep/prerequisites.md
+    # - Lab Prerequisites: prep/prerequisites.md
     - Linux Command-Line Basics: prep/linux_basics.md
     - SSH Key Setup Guide: prep/ssh_key.md
     - Setup VSCode: prep/setup_vscode.md

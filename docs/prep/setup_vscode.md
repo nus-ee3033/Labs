@@ -18,6 +18,8 @@ Install it with:
 cd ~/Downloads
 sudo apt install ./code_*.deb
 ```
+!!! tip
+    You can drag and drop the `.deb` file onto the terminal instead to have its path automatically filled in.
 
 Launch VS Code:
 

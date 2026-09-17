@@ -1,13 +1,9 @@
 # Home
 
 ![Alt text](index_assets/sign.png "AWAS"){width="500"}
-/// caption
-
-///
 
 !!! danger
-	 This site is under construction, please do not refer to any information presented here.
-
+    This site is under construction, please do not refer to any information presented here.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 
@@ -23,11 +19,11 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 
 To make the most of the labs, we recommend doing some reading before you come for your first session. 
 
-1. First, the page on [how to use this website](guides/howto.md). Pay special attention to the section on "How to get help", as it is very important. 
+1. First, the page on [how to use this website](howto.md). Pay special attention to the section on "How to get help", as it is very important. 
 
-2. Next, the [prerequisites for the lab](guides/prerequisites.md). If you have any concerns with these prerequisites, please approach the teaching team as early as possible. 
+2. Next, the [prerequisites for the lab](prep/prerequisites.md). If you have any concerns with these prerequisites, please approach the teaching team as early as possible. 
 
-3. You should also read the [grading scheme for lab assignments and projects](guides/grading.md). 
+3. You should also read the [grading scheme for lab assignments and projects](grading.md). 
 
 <!-- TODO: Add any other steps and prerequisites for the course. -->
 
@@ -38,8 +34,8 @@ To make the most of the labs, we recommend doing some reading before you come fo
 | 1     | 16 Jan 2026   | Nil                                                               |           |
 | 2     | 23 Jan 2026   | Nil                                                               |           |
 | 3     | 30 Jan 2026   | [Lab 1 Title Here](manuals/lab_01/manual_01.md)                   |           |
-| 4     | 06 Feb 2026   | [Lab 2 Title Here](manuals/02/lab_02.md)                          |           |
-| 5     | 13 Feb 2026   | [Lab 3 Title Here](manuals/03/lab_03.md)                          |           |
-| 6     | 20 Feb 2026   | [Lab 4 Title Here](manuals/04/lab_04.md)                          |           |
+| 4     | 06 Feb 2026   | [Lab 2 Title Here](manuals/lab_02/manual_02.md)                   |           |
+| 5     | 13 Feb 2026   | [Lab 3 Title Here](manuals/lab_03/manual_03.md)                   |           |
+| 6     | 20 Feb 2026   | [Lab 4 Title Here](manuals/lab_04/manual_04.md)                   |           |
 
 
