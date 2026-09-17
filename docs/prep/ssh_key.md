@@ -114,7 +114,7 @@ You should now be able to log in without entering the Raspberry Pi password.
 
 !!! info
 
-    You can create SSH shortcuts in your Ubuntu VM so that you do not need to type the full hostname every time.
+    You can create SSH shortcuts in your Ubuntu VM so that you do not need to type the full hostname or start the ROS 2 Docker container every time.
 
 On your VM, open:
 
@@ -125,18 +125,18 @@ nano ~/.ssh/config
 Add:
 
 ```ssh
-Host car
+Host <nickname>
     HostName balanceX.local
     User balance
 
-Host car-ros
+Host <nickname>-ros
     HostName balanceX.local
     User balance
     RequestTTY force
     RemoteCommand bash -lc 'docker start ros2_humble >/dev/null 2>&1 || true; docker exec -it -w /home/ros2_ws ros2_humble bash'
 ```
 
-Replace `X` with the number assigned to your Raspberry Pi.
+Replace `<nickname>` with your preferred shortcut and `X` with the number assigned to your Raspberry Pi. For this manual, we will use `car` as the shortcut.
 
 Set the correct permission for the SSH configuration file:
 
