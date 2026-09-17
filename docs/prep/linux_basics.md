@@ -34,8 +34,8 @@ ls -la
 
 Now you should see extra entries like `.bashrc` or `.config` that weren't visible before — these are hidden by default because a leading `.` tells Linux "don't show me unless asked."
 
-!!! tip
-    This `-flag` / `--flag` pattern isn't unique to `ls` — almost every command-line tool in this course, including `ros2` and `colcon`, works the same way (e.g. `colcon build --symlink-install`).
+
+This `-flag` / `--flag` pattern isn't unique to `ls` — almost every command-line tool in this course, including `ros2` and `colcon`, works the same way (e.g. `colcon build --symlink-install`).
 
 ### Finding out what a command does: `man`
 
