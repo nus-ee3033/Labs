@@ -1,5 +1,9 @@
 # (Almost Painless) SSH Setup Guide
 
+<p align="right">
+  <em>Prepared by Qingqing Ni</em>
+</p>
+
 # 1. Student Guide: Set Up an SSH Key
 
 !!! info

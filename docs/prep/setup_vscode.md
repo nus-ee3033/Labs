@@ -1,4 +1,7 @@
 # Setup VSCode to Edit Files in the ROS2 Docker Container    
+<p align="right">
+  <em>Prepared by Qingqing Ni</em>
+</p>
 
 !!! info   
     This allows you to edit files inside the `ros2_humble` Docker container directly from the Ubuntu VM.

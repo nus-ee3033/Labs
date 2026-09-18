@@ -1,9 +1,12 @@
 # Linux Command-Line Basics
 
-If this is your first time using a terminal, don't worry — you only need a small set of commands to survive this course. This page covers what you'll actually use in Labs 1–6 and the ROS2 lectures.
+<p align="right">
+  <em>Prepared by Qingqing Ni</em>
+</p>
+
 
 !!! info
-    You'll mostly be working inside Ubuntu (either in a VM or via WSL). Everything below applies there.
+    If this is your first time using a terminal, don't worry. You only need a small set of commands to survive this course.  You'll mostly be working inside Ubuntu (either in a VM or via WSL). Everything below applies there.
 
 ## What actually happens when you type a command
 
